@@ -1,0 +1,24 @@
+---
+layout: layouts/base.njk
+templateClass: l-post
+---
+
+<article class="c-article">
+  <header class="c-page-header">
+    <h1 class="c-page-title">
+      {{ title }}
+    </h1>
+
+    <p class="c-post__desc">
+      {{ description }}
+    </p>
+
+    <p class="c-post__meta">
+      <time datetime="{{ date | htmlDateString }}">{{
+        date | readableDate
+      }}</time>
+    </p>
+  </header>
+
+  {{ content | safe }}
+</article>

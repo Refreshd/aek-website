@@ -1,0 +1,32 @@
+<ol
+  reversed
+  class="c-posts"
+  style="counter-reset: start-from {{ postslist.length + 1 }}"
+>
+  {% for post in postslist | reverse %}
+  <li>
+    <article>
+      <h1>
+        <a href="{{ post.url | url }}"
+          >{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{
+            post.url
+          }}</code
+          >{% endif %}</a
+        >
+      </h1>
+      <p class="c-post__meta">
+        <time datetime="{{ post.date | htmlDateString }}">{{
+          post.date | readableDate
+        }}</time>
+        {# {% for tag in post.data.tags %} {%- if tag != "posts" -%} {% set
+        tagUrl %}/tags/{{ tag }}/{% endset %}
+        <a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a>
+        {%- endif -%} {% endfor %} #}
+      </p>
+      <p class="c-post__desc">
+        {{ post.data.description }}
+      </p>
+    </article>
+  </li>
+  {% endfor %}
+</ol>

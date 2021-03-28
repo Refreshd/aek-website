@@ -1,0 +1,29 @@
+:root {
+  --opacity-80: 0.8;
+  --opacity-100: 1;
+
+  --color-white: hsla(0, 0%, 100%, 1);
+  --color-white-dirty: hsla(0, 0%, 95%, 1);
+  --color-grey: hsla(0, 0%, 60%, 1);
+  --color-black: hsla(0, 0%, 0%, 1);
+  --color-black-10: hsla(0, 0%, 0%, 0.1);
+  --color-black-20: hsla(0, 0%, 0%, 0.2);
+  --color-brand-red: hsla(9, 93%, 58%, var(--opacity-80));
+  --color-green: hsla(130, 79%, 38%, 0.35);
+
+  --font-size-base: 18px;
+  --font-size-rem: 1rem;
+
+  --font-family-roboto: 'Roboto Slab', serif;
+
+  --gap: var(--font-size-rem);
+  --gap-sm: calc(var(--gap) * 0.5);
+  --gap-md: calc(var(--gap) * 1.5);
+  --gap-lg: calc(var(--gap) * 2);
+  --gap-xl: calc(var(--gap) * 4);
+}
+
+$bp-mobile: 1024px;
+$bp-desktop: 1025px;
+$bp-desktop-md: 1280px;
+$bp-desktop-lg: 1440px;

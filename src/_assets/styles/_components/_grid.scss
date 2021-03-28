@@ -1,0 +1,29 @@
+.c-grid {
+  display: flex;
+  justify-content: space-between;
+
+  @supports (display: grid) {
+    display: grid;
+    grid-gap: var(--gap);
+
+    @media (min-width: $bp-desktop) {
+      grid-gap: var(--gap-lg);
+    }
+  }
+}
+
+.c-grid--thirds {
+  grid-template-columns: 1fr;
+
+  @media (min-width: $bp-desktop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.c-grid--halves {
+  grid-template-columns: 1fr;
+
+  @media (min-width: $bp-desktop) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

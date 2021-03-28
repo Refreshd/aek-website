@@ -1,0 +1,19 @@
+.l-site-header {
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  width: 100vw;
+  padding-block-start: var(--gap);
+
+  > .u-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .c-logo {
+    width: 10rem;
+    mix-blend-mode: exclusion;
+    color: white;
+  }
+}

@@ -1,0 +1,32 @@
+.c-location-info {
+  display: flex;
+  align-items: center;
+  text-align: right;
+  color: black;
+  mix-blend-mode: exclusion;
+}
+
+.c-nav {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    padding-block: var(--gap-sm);
+    color: var(--color-white);
+    text-align: right;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &.is-active {
+      font-weight: 700;
+    }
+  }
+}
+
+.c-service-list {
+  list-style-type: none;
+}
+
+.c-card__image {
+  margin-block-end: var(--gap-md);
+}

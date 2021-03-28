@@ -1,0 +1,11 @@
+<header class="l-site-header">
+  <div class="u-container">
+    <a href="{{ '/' | url }}" class="c-site-title" title="{{ renderData.title or title or metadata.title }}">
+      {% include '../../_assets/images/logo.svg' %}
+    </a>
+  
+    <div class="c-location-info">
+      Nalazimo se na adresi&nbsp; <address> {{ metadata.address }}</address>
+    </div>
+  </div>
+</header>

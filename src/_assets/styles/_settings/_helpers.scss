@@ -1,0 +1,19 @@
+.u-container {
+  max-width: 100%;
+  margin-inline: var(--gap);
+
+  @media (min-width: $bp-desktop-lg) {
+    width: 70rem;
+    margin-inline: auto;
+  }
+}
+
+.u-hidden {
+  display: none;
+}
+
+.u-gap-top-d-lg {
+  @media (min-width: $bp-desktop) {
+    margin-block-start: var(--gap-lg);
+  }
+}

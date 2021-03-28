@@ -1,0 +1,56 @@
+fieldset,
+.c-field-group {
+  display: block;
+  margin-block-end: var(--gap-lg);
+  border: none;
+}
+
+label,
+.c-form-label {
+  display: block;
+  margin-block-end: var(--gap-sm);
+}
+
+input,
+textarea,
+.c-input-control {
+  display: block;
+  width: 100%;
+  padding: var(--gap);
+  font-size: var(--font-size-rem);
+  font-family: var(--font-family-roboto);
+  border: 1px solid var(--color-black);
+  background-color: var(--color-white);
+  box-shadow: var(--gap-sm) var(--gap-sm) var(--color-white-dirty);
+  transition: box-shadow 0.2s ease-in-out;
+
+  &:focus,
+  &:active {
+    outline-color: var(--color-green);
+    box-shadow: var(--gap) var(--gap) var(--color-green);
+  }
+}
+
+.c-btn {
+  display: inline-block;
+  padding: var(--gap) var(--gap-md);
+  font-size: var(--font-size-rem);
+  border: 1px solid var(--color-black);
+  background-color: var(--color-black-10);
+  box-shadow: var(--gap-sm) var(--gap-sm) var(--color-white-dirty);
+  color: var(--color-black);
+  transition: all 0.3s ease-in-out;
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: var(--color-white);
+    background-color: var(--color-black);
+    box-shadow: var(--gap) var(--gap) var(--color-white-dirty);
+    cursor: pointer;
+  }
+}
+
+.c-btn--primary {
+  background-color: var(--color-green);
+}

@@ -1,0 +1,37 @@
+{
+  "name": "aek-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm-run-all --parallel dev:*",
+    "dev:eleventy": "ELEVENTY_ENV=development eleventy --serve --quiet",
+    "dev:parcel": "parcel watch src/_assets/images/* src/_assets/video/* src/_assets/styles/main.scss src/_assets/js/index.js --out-dir _site/assets",
+    "dev:svg": "svg-sprite-generate -d src/_assets/icons -o src/_includes/partials/sprite.svg",
+    "build": "npm run prod:eleventy && npm run prod:parcel && npm run prod:svg",
+    "prod:eleventy": "ELEVENTY_ENV=production eleventy --output=./build",
+    "prod:parcel": "parcel build src/_assets/images/* src/_assets/video/*  src/_assets/styles/main.scss src/_assets/js/index.js --out-dir _site/assets",
+    "prod:svg": "svg-sprite-generate -d src/_assets/icons -o src/_includes/partials/sprite.svg",
+    "clean": "rm -rf _site && rm -rf .cache & rm -rf node_modules && rm package-lock.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamzoka/aek-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iamzoka/aek-website/issues"
+  },
+  "homepage": "https://github.com/iamzoka/aek-website#readme",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.12.3",
+    "prettier": "^2.0.5",
+    "sass": "^1.26.8",
+    "stylelint": "^13.6.1",
+    "stylelint-prettier": "^1.1.2",
+    "svg-sprite-generator": "0.0.7"
+  },
+  "dependencies": {}
+}
