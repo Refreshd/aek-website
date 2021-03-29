@@ -1,19 +1,43 @@
 .l-site-header {
   position: fixed;
   top: 0;
-  z-index: 5;
+  z-index: 10;
   width: 100vw;
-  padding-block-start: var(--gap);
+  padding-block: var(--gap);
+  color: var(--color-white);
+  transition: all 0.3s ease-in-out;
+
+  .c-site-title {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    color: var(--color-white);
+  }
+
+  &.is-sticky {
+    padding-block: var(--gap-sm);
+    color: var(--color-black);
+    background-color: var(--color-white);
+    box-shadow: 0 var(--gap-sm) var(--gap-sm) var(--color-black-10);
+
+    .c-site-title {
+      color: var(--color-black);
+    }
+  }
 
   > .u-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
+
+    @media (min-width: $bp-desktop) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 
   .c-logo {
     width: 10rem;
-    mix-blend-mode: exclusion;
-    color: white;
   }
 }

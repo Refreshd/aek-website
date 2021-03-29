@@ -29,7 +29,7 @@
     top: 50%;
     right: var(--gap);
     transform: translateY(-50%);
-    z-index: 5;
+    z-index: 2;
   }
 
   .c-intro-video {
@@ -44,7 +44,12 @@
   .c-section__title {
     position: relative;
     z-index: 5;
-    max-width: 75%;
+    text-align: center;
+
+    @media (min-width: $bp-desktop) {
+      max-width: 75%;
+      text-align: left;
+    }
   }
 
   .c-scroll-indicator {

@@ -1,6 +1,5 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
-
   eleventyConfig.addLayoutAlias('post', 'layouts/post.njk');
 
   return {
