@@ -23,6 +23,12 @@
 
 .c-service-list {
   list-style-type: none;
+
+  .c-card__image {
+    object-fit: cover;
+    height: 15rem;
+    border: 1px solid var(--color-black-10);
+  }
 }
 
 .c-card__image {
