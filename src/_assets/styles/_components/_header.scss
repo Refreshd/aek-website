@@ -3,7 +3,8 @@
   top: 0;
   z-index: 10;
   width: 100vw;
-  padding-block: var(--gap);
+  padding-block-start: 0;
+  padding-block-end: var(--gap) ;
   color: var(--color-white);
   transition: all 0.3s ease-in-out;
 
@@ -15,7 +16,8 @@
   }
 
   &.is-sticky {
-    padding-block: var(--gap-sm);
+    padding-block-start: 0;
+    padding-block-end: var(--gap-sm);
     color: var(--color-black);
     background-color: var(--color-white);
     box-shadow: 0 var(--gap-sm) var(--gap-sm) var(--color-black-10);
@@ -39,5 +41,29 @@
 
   .c-logo {
     width: 10rem;
+  }
+}
+
+.c-job-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    font-size: 1rem;
+    color: rgb(0,0,0);
+  }
+}
+
+.c-job-post {
+  background-color: rgb(239, 239, 163);
+  margin-bottom: 1rem;
+
+  .c-btn {
+    box-shadow: none;
+
+    &:hover {
+        box-shadow: none;
+    }
   }
 }

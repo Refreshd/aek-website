@@ -1,9 +1,17 @@
 <header class="l-site-header">
+  <div class="c-job-post">
+    <div class="u-container">
+      <div class="c-job-text">
+        <p>Zapošljavamo, pridruži se timu</p>
+        <a href="#contact" class="c-btn c-btn--sm c-btn--warning">Prijavi se</a>
+      </div>
+    </div>
+  </div>
   <div class="u-container">
     <a href="{{ '/' | url }}" class="c-site-title" title="{{ renderData.title or title or metadata.title }}">
       {% include '../../_assets/images/logo.svg' %}
     </a>
-  
+
     <div class="c-location-info">
       Nalazimo se na adresi&nbsp; <address> {{ metadata.address }}</address>
     </div>
